@@ -37,4 +37,7 @@ def login(request):
             'access':str(refresh.access_token),
             'role':user.role
         })
+    return Response({
+        "error": "Invalid Credentials"
+    }, status=401)
     
